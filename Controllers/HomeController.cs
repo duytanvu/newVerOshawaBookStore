@@ -1,4 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*
+ * Duy Tan Vu
+ * Book Store project for Lab 5, Comm Activity 5 & Lab 06
+ * Date Created: December 9, 2020
+ */
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OshawaBookStore.Models;
 using System;

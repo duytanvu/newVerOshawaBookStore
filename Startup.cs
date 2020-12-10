@@ -1,3 +1,9 @@
+/*
+ * Duy Tan Vu
+ * Book Store project for Lab 5, Comm Activity 5 & Lab 06
+ * Date Created: December 9, 2020
+ */
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +18,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using OshawaBookStore.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OshawaBookStore
 {
@@ -34,6 +43,8 @@ namespace OshawaBookStore
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
